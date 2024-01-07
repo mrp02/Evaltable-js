@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evaltable-js</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.js">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- <div class=" div1  col-6 mx-auto mt-3">
+        
+        <div class="input-group">
+            <h3 class="me-2">Colums</h3>
+            <input class="bg-warning me-2" type="text" aria-label="First name" class="form-control">
+            <h3 class="me-2">Rows</h3>
+            <input class="bg-warning me-2" type="text" aria-label="Last name" class="form-control">
+        </div>
+    </div> -->
+    <div class="head">
+        <strong> Columns </strong><input id="colNumber" type="number" >
+        <strong>Rows </strong><input id="rowNumber" type="number">
+        <strong>Evaluation</strong>
+        <select name="" id="selectEval">
+            <option value="+">ADD</option>
+            <option value="-">SUBTRACT</option>
+            <option value="*">MULTIPLY</option>
+            <option id="divider" value="/">DIVIDE</option>
+        </select>
+        <button id="displayButton" onclick="displayAll()">Make me a Table</button>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <table id="dispDiv" border="1">
+        
+            <table>
+    </div>
+
+
+    <script>
+        var tabRow = rowNumber.value;
+        var tabColumn = colNumber.value;
+
+        function displayAll(val) {
+            var sign = selectEval.value
+            var tab = "<table>"
+            tab += "<tr>"
+            for (var i = 1; i <= parseInt(colNumber.value); i++) {
+                tab += "<td>"
+                for (var j = 1; j <= parseInt(rowNumber.value); j++) {
+                    var calcValue = (eval(i + sign + j))
+
+                    if (calcValue % 1 !== 0) {
+                        var calcValue = parseFloat(eval(i + sign + j)).toFixed(2)
+                    }
+                    tab += i + sign + j + "=" + calcValue + "<br>" + "<br>";
+                }
+
+            }
+            tab += "</table>"
+            dispDiv.innerHTML = tab
+        }
+
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

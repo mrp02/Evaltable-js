@@ -1,0 +1,77 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(224186-popular-wallpapers-for-windows-10-2880x1800.jpg);
+    background-size: cover;
+
+}
+
+@media screen and (max-width:700px) {
+    body {
+
+        background-image: url(224186-popular-wallpapers-for-windows-10-2880x1800.jpg);
+        background-size: cover;
+        height: 145vh;
+
+
+    }
+}
+
+.head {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#colNumber {
+    background-color: #e3c63c;
+    border-radius: 18%;
+}
+
+#rowNumber {
+    background-color: #e3c63c;
+    border-radius: 18%;
+}
+
+#selectEval {
+    background-color: #e3c63c;
+    border-radius: 18%;
+}
+
+#displayButton {
+    background-color: #e3c63c;
+    border-radius: 16%;
+}
+
+#dispDiv {
+    margin-left: 300px;
+    background-color: #e3c63c;
+}
+
+@media screen and (max-width:700px) {
+    #dispDiv {
+        margin-left: 0px;
+        background-color: #e3c63c;
+        width: 10px;
+
+
+    }
+}
+
+
+/* .div1{
+    
+    text-align: center;
+    
+}
+
+.div2{
+    text-align: center;
+}
+
+.input-group{
+    border-radius: 50% !important;
+} */
